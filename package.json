@@ -12,6 +12,7 @@
     "!/dist/jest.config.js"
   ],
   "scripts": {
+    "format": "eslint --fix --ext .ts .",
     "prepack": "tsc",
     "test": "eslint --ext .ts . && tsc && jest"
   },
