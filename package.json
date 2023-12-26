@@ -1,0 +1,28 @@
+{
+  "name": "@xuhdev/irr",
+  "version": "1.0.0",
+  "description": "A package for computing the internal rate of return.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.com:xuhdev/irr.git"
+  },
+  "keywords": [
+    "finance"
+  ],
+  "author": "Hong Xu",
+  "license": " LGPL-2.1",
+  "bugs": {
+    "url": "https://gitlab.com/xuhdev/irr/issues"
+  },
+  "homepage": "https://gitlab.com/xuhdev/irr#readme",
+  "devDependencies": {
+    "eslint": "^8.56.0"
+  },
+  "dependencies": {
+    "ml-matrix": "^6.11.0"
+  }
+}
