@@ -2,7 +2,9 @@
   "name": "@xuhdev/irr",
   "version": "1.0.0",
   "description": "A package for computing the internal rate of return.",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "prepublish": "npx tsc",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -20,7 +22,9 @@
   },
   "homepage": "https://gitlab.com/xuhdev/irr#readme",
   "devDependencies": {
-    "eslint": "^8.56.0"
+    "@types/node": "^20.10.5",
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3"
   },
   "dependencies": {
     "ml-matrix": "^6.11.0"
