@@ -1,4 +1,4 @@
-import { Matrix, EigenvalueDecomposition } from 'ml-matrix';
+import { Matrix, EigenvalueDecomposition } from 'ml-matrix'
 
 /**
  * Generates the companion matrix from given coefficients.
@@ -6,13 +6,13 @@ import { Matrix, EigenvalueDecomposition } from 'ml-matrix';
  * @param p - Coefficients of the polynomial, from the lowest order to the highest order. The
  * coefficient of the highest is assumed to be 1.
  */
-function computeCompanionMatrix(p: number[]): Matrix {
-    let matrix = Matrix.zeros(p.length, p.length);
-    matrix.setRow(matrix.rows - 1, p.map(i => -i));
-    for (let i = 0; i < matrix.rows - 1; ++ i) {
-        matrix.set(i, i + 1, 1);
-    }
-    return matrix
+function computeCompanionMatrix (p: number[]): Matrix {
+  const matrix = Matrix.zeros(p.length, p.length)
+  matrix.setRow(matrix.rows - 1, p.map(i => -i))
+  for (let i = 0; i < matrix.rows - 1; ++i) {
+    matrix.set(i, i + 1, 1)
+  }
+  return matrix
 }
 
 /**
@@ -21,12 +21,12 @@ function computeCompanionMatrix(p: number[]): Matrix {
  *
  * @param cashFlows - The cash flow of each period.
  */
-export function computeIrr(cashFlows: number[]): number[] {
-    // If last period cash flow is undefined, it means the cashFlow array is empty.
-    const lastPeriodCashFlow = cashFlows.at(-1)
-    if (lastPeriodCashFlow === undefined) {
-        return []
-    }
-    const cm = computeCompanionMatrix(cashFlows.slice(0, -1).map(i => i / lastPeriodCashFlow))
-    return new EigenvalueDecomposition(cm).realEigenvalues.map(i => 1 / i - 1).filter(i => (i >= 0))
+export function computeIrr (cashFlows: number[]): number[] {
+  // If last period cash flow is undefined, it means the cashFlow array is empty.
+  const lastPeriodCashFlow = cashFlows.at(-1)
+  if (lastPeriodCashFlow === undefined) {
+    return []
+  }
+  const cm = computeCompanionMatrix(cashFlows.slice(0, -1).map(i => i / lastPeriodCashFlow))
+  return new EigenvalueDecomposition(cm).realEigenvalues.map(i => 1 / i - 1).filter(i => (i >= 0))
 }

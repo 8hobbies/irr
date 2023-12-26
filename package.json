@@ -13,7 +13,7 @@
   ],
   "scripts": {
     "prepack": "tsc",
-    "test": "tsc && jest"
+    "test": "tsc && jest && eslint *.ts"
   },
   "repository": {
     "type": "git",
