@@ -4,11 +4,11 @@
   "description": "A package for computing the internal rate of return.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "prepublish": "npx tsc",
   "files": [
     "/dist"
   ],
   "scripts": {
+    "prepack": "tsc",
     "test": "jest"
   },
   "repository": {
