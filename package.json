@@ -7,7 +7,9 @@
   "files": [
     "/dist",
     "!/dist/**.test.d.ts",
-    "!/dist/**.test.js"
+    "!/dist/**.test.js",
+    "!/dist/jest.config.d.ts",
+    "!/dist/jest.config.js"
   ],
   "scripts": {
     "prepack": "tsc",
