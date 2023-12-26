@@ -22,6 +22,10 @@ function computeCompanionMatrix (p: number[]): Matrix {
  * @param cashFlows - The cash flow of each period.
  */
 export function computeIrr (cashFlows: number[]): number[] {
+  // Not enough cashFlow entries, returns nothing.
+  if (cashFlows.length <= 1) {
+    return []
+  }
   // If last period cash flow is undefined, it means the cashFlow array is empty.
   const lastPeriodCashFlow = cashFlows.at(-1)
   if (lastPeriodCashFlow === undefined) {
