@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@gitlab.com:xuhdev/irr.git"
+    "url": "git+ssh://git@gitlab.com/xuhdev/irr.git"
   },
   "keywords": [
     "finance"
