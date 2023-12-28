@@ -26,11 +26,10 @@ export function computeIrr (cashFlows: number[]): number[] {
   if (cashFlows.length <= 1) {
     return []
   }
-  // If last period cash flow is undefined, it means the cashFlow array is empty.
-  const lastPeriodCashFlow = cashFlows.at(-1)
-  if (lastPeriodCashFlow === undefined) {
-    return []
-  }
+
+  // The last period cash flow cannot be undefined, otherwise the cashFlow array would be empty.
+  // eslint-disable-next-line  @typescript-eslint/no-non-null-assertion
+  const lastPeriodCashFlow = cashFlows.at(-1)!
   const cm = computeCompanionMatrix(cashFlows.slice(0, -1).map(i => i / lastPeriodCashFlow))
   return new EigenvalueDecomposition(cm).realEigenvalues.map(i => 1 / i - 1).filter(i => (i >= 0))
 }
