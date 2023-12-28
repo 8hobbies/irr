@@ -5,6 +5,7 @@ import { Matrix, EigenvalueDecomposition } from 'ml-matrix'
  *
  * @param p - Coefficients of the polynomial, from the lowest order to the highest order. The
  * coefficient of the highest is assumed to be 1.
+ * @returns The companion matrix.
  */
 function computeCompanionMatrix (p: number[]): Matrix {
   const matrix = Matrix.zeros(p.length, p.length)
@@ -20,6 +21,7 @@ function computeCompanionMatrix (p: number[]): Matrix {
  * The function only returns reasonable IRRs, i.e., IRRs that are real non-negative numbers.
  *
  * @param cashFlows - The cash flow of each period.
+ * @returns An array of IRRs.
  */
 export function computeIrr (cashFlows: number[]): number[] {
   // Not enough cashFlow entries, returns nothing.
