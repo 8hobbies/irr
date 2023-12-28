@@ -31,7 +31,7 @@ function computeCompanionMatrix (p: number[]): Matrix {
 }
 
 /**
- * Computes the internal rate of return (IRR) of the given cash flows. The result may not be unique.
+ * Computes the Internal Rate of Return (IRR) of the given cash flows. The result may not be unique.
  * The function only returns reasonable IRRs, i.e., IRRs that are real non-negative numbers.
  *
  * @param cashFlows - The cash flow of each period.
@@ -48,4 +48,29 @@ export function computeIrr (cashFlows: number[]): number[] {
   const lastPeriodCashFlow = cashFlows.at(-1)!
   const cm = computeCompanionMatrix(cashFlows.slice(0, -1).map(i => i / lastPeriodCashFlow))
   return new EigenvalueDecomposition(cm).realEigenvalues.map(i => 1 / i - 1).filter(i => (i >= 0))
+}
+
+/**
+ * Computes and returns the Net Present Value (NPV) of the given cash flows and discount rate.
+ *
+ * @param cashFlows - The cash flow of each period.
+ * @param rate - The discount rate.
+ * @returns The NPV. NaN if no solution.
+ */
+export function computeNpv (cashFlows: number[], rate: number): number {
+  if (cashFlows.length === 0) {
+    return NaN
+  }
+
+  if (rate <= 0) {
+    return NaN
+  }
+
+  let result = cashFlows[0]
+  let discount = 1
+  for (const cashFlow of cashFlows.slice(1)) {
+    discount *= 1 + rate
+    result += cashFlow / discount
+  }
+  return result
 }

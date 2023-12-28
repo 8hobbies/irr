@@ -13,7 +13,7 @@
 // limitations under the License.
 
 import { describe, expect, test } from '@jest/globals'
-import { computeIrr } from './index'
+import { computeIrr, computeNpv } from './index'
 
 describe('computeIrr function', () => {
   test('empty input', () => {
@@ -33,5 +33,23 @@ describe('computeIrr function', () => {
   })
   test('three unsolvable inputs', () => {
     expect(computeIrr([-1, -1, -2])).toStrictEqual([])
+  })
+})
+
+describe('computeNpv function', () => {
+  test('empty cashflow', () => {
+    expect(computeNpv([], 0.1)).toBe(NaN)
+  })
+  test('negative rate', () => {
+    expect(computeNpv([1], -0.1)).toBe(NaN)
+  })
+  test('one cashflow inputs', () => {
+    expect(computeNpv([1], 0.1)).toBe(1)
+  })
+  test('two cashflow inputs', () => {
+    expect(computeNpv([-3, 3], 0.5)).toBe(-1)
+  })
+  test('NaN in cashflow', () => {
+    expect(computeNpv([NaN, 3], 0.5)).toBe(NaN)
   })
 })
