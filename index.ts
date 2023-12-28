@@ -38,6 +38,10 @@ function computeCompanionMatrix (p: number[]): Matrix {
  * @returns An array of IRRs.
  */
 export function computeIrr (cashFlows: number[]): number[] {
+  if (cashFlows.includes(NaN)) {
+    return []
+  }
+
   // Not enough cashFlow entries, returns nothing.
   if (cashFlows.length <= 1) {
     return []

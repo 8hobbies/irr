@@ -16,11 +16,17 @@ import { describe, expect, test } from '@jest/globals'
 import { computeIrr, computeNpv } from './index'
 
 describe('computeIrr function', () => {
+  test('input containing NaN', () => {
+    expect(computeIrr([NaN])).toStrictEqual([])
+    expect(computeIrr([NaN, 1])).toStrictEqual([])
+    expect(computeIrr([NaN, 1, 2])).toStrictEqual([])
+  })
   test('empty input', () => {
     expect(computeIrr([])).toStrictEqual([])
   })
   test('one input', () => {
     expect(computeIrr([1])).toStrictEqual([])
+    expect(computeIrr([-1])).toStrictEqual([])
   })
   test('two solvable inputs', () => {
     expect(computeIrr([-1, 2])).toStrictEqual([1])
