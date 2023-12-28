@@ -42,6 +42,18 @@ export function computeIrr (cashFlows: number[]): number[] {
     return []
   }
 
+  // Strip zeros at the beginning and end of cash flows.
+  const notZero = (i: number): boolean => i !== 0
+  const firstNonZero = cashFlows.findIndex(notZero)
+  if (firstNonZero === -1) { // no non-zero in cash flow
+    return []
+  }
+  cashFlows = cashFlows.slice(firstNonZero)
+  // Now cashFlows must contain a non-zero element because the code above has already filtered out
+  // the situation in which cashFlows does not contain non-zeros.
+  // eslint-disable-next-line  @typescript-eslint/no-non-null-assertion
+  cashFlows = cashFlows.slice(0, cashFlows.findLastIndex(notZero)! + 1)
+
   // Not enough cashFlow entries, returns nothing.
   if (cashFlows.length <= 1) {
     return []

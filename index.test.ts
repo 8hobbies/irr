@@ -40,6 +40,28 @@ describe('computeIrr function', () => {
   test('three unsolvable inputs', () => {
     expect(computeIrr([-1, -1, -2])).toStrictEqual([])
   })
+  test('all zero inputs', () => {
+    expect(computeIrr([0])).toStrictEqual([])
+    expect(computeIrr([0, 0])).toStrictEqual([])
+  })
+  test('unsolvable with trailing zero inputs', () => {
+    expect(computeIrr([-1, -1, 0])).toStrictEqual([])
+  })
+  test('solvable with trailing zero inputs', () => {
+    expect(computeIrr([-1, 2, 0])).toStrictEqual([1])
+  })
+  test('unsolvable with leading zero inputs', () => {
+    expect(computeIrr([0, -1, -1])).toStrictEqual([])
+  })
+  test('solvable with leading zero inputs', () => {
+    expect(computeIrr([0, -1, 2])).toStrictEqual([1])
+  })
+  test('unsolvable with leading and trailing zero inputs', () => {
+    expect(computeIrr([0, -1, -1, 0])).toStrictEqual([])
+  })
+  test('solvable with leading and trailing zero inputs', () => {
+    expect(computeIrr([0, -1, 2, 0])).toStrictEqual([1])
+  })
 })
 
 describe('computeNpv function', () => {
