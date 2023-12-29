@@ -14,8 +14,9 @@
   "scripts": {
     "doc": "typedoc",
     "format": "eslint --fix --ext .ts .",
+    "lint": "eslint --ext .ts .",
     "prepack": "tsc",
-    "test": "eslint --ext .ts . && tsc && jest"
+    "test": "tsc && jest"
   },
   "repository": {
     "type": "git",
@@ -31,6 +32,7 @@
   },
   "homepage": "https://gitlab.com/xuhdev/irr#readme",
   "devDependencies": {
+    "@babel/preset-env": "^7.23.7",
     "@babel/preset-typescript": "^7.23.3",
     "@jest/globals": "^29.7.0",
     "@types/node": "^20.10.5",

@@ -15,6 +15,13 @@
 include:
   - template: 'Workflows/MergeRequest-Pipelines.gitlab-ci.yml'
 
+.lint:
+  image: "node:18"
+  script:
+    - npm install
+    - npm run lint
+  interruptible: true
+
 .docs:
   image: "node:18"
   script:
@@ -36,3 +43,20 @@ pages:
   stage: deploy
   only:
     - master
+
+.runtime:
+  image: "node:${NODE_VERSION}"
+  script:
+    - npm install
+    - npm test
+  interruptible: true
+
+runtime-18:
+  extends: ".runtime"
+  variables:
+    NODE_VERSION: "18"
+
+runtime-20:
+  extends: ".runtime"
+  variables:
+    NODE_VERSION: "20"
