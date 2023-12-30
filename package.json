@@ -30,7 +30,7 @@
   "bugs": {
     "url": "https://gitlab.com/xuhdev/irr/issues"
   },
-  "homepage": "https://gitlab.com/xuhdev/irr#readme",
+  "homepage": "https://irr.topbug.net",
   "devDependencies": {
     "@babel/preset-env": "^7.23.7",
     "@babel/preset-typescript": "^7.23.3",
