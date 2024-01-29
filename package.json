@@ -1,5 +1,5 @@
 {
-  "name": "@xuhdev/irr",
+  "name": "@hong-xu/irr",
   "version": "1.0.0",
   "description": "A package for computing the internal rate of return.",
   "main": "dist/index.js",
