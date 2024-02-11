@@ -12,72 +12,72 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import { describe, expect, test } from '@jest/globals'
-import { computeIrr, computeNpv } from './index'
+import { describe, expect, test } from "@jest/globals";
+import { computeIrr, computeNpv } from "./index";
 
-describe('computeIrr function', () => {
-  test('input containing NaN', () => {
-    expect(computeIrr([NaN])).toStrictEqual([])
-    expect(computeIrr([NaN, 1])).toStrictEqual([])
-    expect(computeIrr([NaN, 1, 2])).toStrictEqual([])
-  })
-  test('empty input', () => {
-    expect(computeIrr([])).toStrictEqual([])
-  })
-  test('one input', () => {
-    expect(computeIrr([1])).toStrictEqual([])
-    expect(computeIrr([-1])).toStrictEqual([])
-  })
-  test('two solvable inputs', () => {
-    expect(computeIrr([-1, 2])).toStrictEqual([1])
-  })
-  test('two unsolvable inputs', () => {
-    expect(computeIrr([-1, -1])).toStrictEqual([])
-  })
-  test('three solvable inputs', () => {
-    expect(computeIrr([-1, 1, 2])).toStrictEqual([1])
-  })
-  test('three unsolvable inputs', () => {
-    expect(computeIrr([-1, -1, -2])).toStrictEqual([])
-  })
-  test('all zero inputs', () => {
-    expect(computeIrr([0])).toStrictEqual([])
-    expect(computeIrr([0, 0])).toStrictEqual([])
-  })
-  test('unsolvable with trailing zero inputs', () => {
-    expect(computeIrr([-1, -1, 0])).toStrictEqual([])
-  })
-  test('solvable with trailing zero inputs', () => {
-    expect(computeIrr([-1, 2, 0])).toStrictEqual([1])
-  })
-  test('unsolvable with leading zero inputs', () => {
-    expect(computeIrr([0, -1, -1])).toStrictEqual([])
-  })
-  test('solvable with leading zero inputs', () => {
-    expect(computeIrr([0, -1, 2])).toStrictEqual([1])
-  })
-  test('unsolvable with leading and trailing zero inputs', () => {
-    expect(computeIrr([0, -1, -1, 0])).toStrictEqual([])
-  })
-  test('solvable with leading and trailing zero inputs', () => {
-    expect(computeIrr([0, -1, 2, 0])).toStrictEqual([1])
-  })
-})
+describe("computeIrr function", () => {
+  test("input containing NaN", () => {
+    expect(computeIrr([NaN])).toStrictEqual([]);
+    expect(computeIrr([NaN, 1])).toStrictEqual([]);
+    expect(computeIrr([NaN, 1, 2])).toStrictEqual([]);
+  });
+  test("empty input", () => {
+    expect(computeIrr([])).toStrictEqual([]);
+  });
+  test("one input", () => {
+    expect(computeIrr([1])).toStrictEqual([]);
+    expect(computeIrr([-1])).toStrictEqual([]);
+  });
+  test("two solvable inputs", () => {
+    expect(computeIrr([-1, 2])).toStrictEqual([1]);
+  });
+  test("two unsolvable inputs", () => {
+    expect(computeIrr([-1, -1])).toStrictEqual([]);
+  });
+  test("three solvable inputs", () => {
+    expect(computeIrr([-1, 1, 2])).toStrictEqual([1]);
+  });
+  test("three unsolvable inputs", () => {
+    expect(computeIrr([-1, -1, -2])).toStrictEqual([]);
+  });
+  test("all zero inputs", () => {
+    expect(computeIrr([0])).toStrictEqual([]);
+    expect(computeIrr([0, 0])).toStrictEqual([]);
+  });
+  test("unsolvable with trailing zero inputs", () => {
+    expect(computeIrr([-1, -1, 0])).toStrictEqual([]);
+  });
+  test("solvable with trailing zero inputs", () => {
+    expect(computeIrr([-1, 2, 0])).toStrictEqual([1]);
+  });
+  test("unsolvable with leading zero inputs", () => {
+    expect(computeIrr([0, -1, -1])).toStrictEqual([]);
+  });
+  test("solvable with leading zero inputs", () => {
+    expect(computeIrr([0, -1, 2])).toStrictEqual([1]);
+  });
+  test("unsolvable with leading and trailing zero inputs", () => {
+    expect(computeIrr([0, -1, -1, 0])).toStrictEqual([]);
+  });
+  test("solvable with leading and trailing zero inputs", () => {
+    expect(computeIrr([0, -1, 2, 0])).toStrictEqual([1]);
+  });
+});
 
-describe('computeNpv function', () => {
-  test('empty cashflow', () => {
-    expect(computeNpv([], 0.1)).toBe(NaN)
-  })
-  test('negative rate', () => {
-    expect(computeNpv([1], -0.1)).toBe(NaN)
-  })
-  test('one cashflow inputs', () => {
-    expect(computeNpv([1], 0.1)).toBe(1)
-  })
-  test('two cashflow inputs', () => {
-    expect(computeNpv([-3, 3], 0.5)).toBe(-1)
-  })
-  test('NaN in cashflow', () => {
-    expect(computeNpv([NaN, 3], 0.5)).toBe(NaN)
-  })
-})
+describe("computeNpv function", () => {
+  test("empty cashflow", () => {
+    expect(computeNpv([], 0.1)).toBe(NaN);
+  });
+  test("negative rate", () => {
+    expect(computeNpv([1], -0.1)).toBe(NaN);
+  });
+  test("one cashflow inputs", () => {
+    expect(computeNpv([1], 0.1)).toBe(1);
+  });
+  test("two cashflow inputs", () => {
+    expect(computeNpv([-3, 3], 0.5)).toBe(-1);
+  });
+  test("NaN in cashflow", () => {
+    expect(computeNpv([NaN, 3], 0.5)).toBe(NaN);
+  });
+});

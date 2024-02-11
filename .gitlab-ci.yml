@@ -13,7 +13,7 @@
 # limitations under the License.
 
 include:
-  - template: 'Workflows/MergeRequest-Pipelines.gitlab-ci.yml'
+  - template: "Workflows/MergeRequest-Pipelines.gitlab-ci.yml"
 
 .lint:
   image: "node:18"
@@ -30,7 +30,7 @@ include:
     - mv docs/ public
   artifacts:
     paths:
-    - public
+      - public
   interruptible: true
 
 docs:

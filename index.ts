@@ -12,7 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import { Matrix, EigenvalueDecomposition } from 'ml-matrix'
+import { Matrix, EigenvalueDecomposition } from "ml-matrix";
 
 /**
  * Generates the companion matrix from given coefficients.
@@ -21,13 +21,16 @@ import { Matrix, EigenvalueDecomposition } from 'ml-matrix'
  * coefficient of the highest is assumed to be 1.
  * @returns The companion matrix.
  */
-function computeCompanionMatrix (p: number[]): Matrix {
-  const matrix = Matrix.zeros(p.length, p.length)
-  matrix.setRow(matrix.rows - 1, p.map(i => -i))
+function computeCompanionMatrix(p: number[]): Matrix {
+  const matrix = Matrix.zeros(p.length, p.length);
+  matrix.setRow(
+    matrix.rows - 1,
+    p.map((i) => -i),
+  );
   for (let i = 0; i < matrix.rows - 1; ++i) {
-    matrix.set(i, i + 1, 1)
+    matrix.set(i, i + 1, 1);
   }
-  return matrix
+  return matrix;
 }
 
 /**
@@ -37,32 +40,37 @@ function computeCompanionMatrix (p: number[]): Matrix {
  * @param cashFlows - The cash flow of each period.
  * @returns An array of IRRs.
  */
-export function computeIrr (cashFlows: number[]): number[] {
+export function computeIrr(cashFlows: number[]): number[] {
   if (cashFlows.includes(NaN)) {
-    return []
+    return [];
   }
 
   // Strip zeros at the beginning and end of cash flows.
-  const notZero = (i: number): boolean => i !== 0
-  const firstNonZero = cashFlows.findIndex(notZero)
-  if (firstNonZero === -1) { // no non-zero in cash flow
-    return []
+  const notZero = (i: number): boolean => i !== 0;
+  const firstNonZero = cashFlows.findIndex(notZero);
+  if (firstNonZero === -1) {
+    // no non-zero in cash flow
+    return [];
   }
-  cashFlows = cashFlows.slice(firstNonZero)
+  cashFlows = cashFlows.slice(firstNonZero);
   // Now cashFlows must contain a non-zero element because the code above has already filtered out
   // the situation in which cashFlows does not contain non-zeros.
-  cashFlows = cashFlows.slice(0, cashFlows.findLastIndex(notZero) + 1)
+  cashFlows = cashFlows.slice(0, cashFlows.findLastIndex(notZero) + 1);
 
   // Not enough cashFlow entries, returns nothing.
   if (cashFlows.length <= 1) {
-    return []
+    return [];
   }
 
   // The last period cash flow cannot be undefined, otherwise the cashFlow array would be empty.
   // eslint-disable-next-line  @typescript-eslint/no-non-null-assertion
-  const lastPeriodCashFlow = cashFlows.at(-1)!
-  const cm = computeCompanionMatrix(cashFlows.slice(0, -1).map(i => i / lastPeriodCashFlow))
-  return new EigenvalueDecomposition(cm).realEigenvalues.map(i => 1 / i - 1).filter(i => (i >= 0))
+  const lastPeriodCashFlow = cashFlows.at(-1)!;
+  const cm = computeCompanionMatrix(
+    cashFlows.slice(0, -1).map((i) => i / lastPeriodCashFlow),
+  );
+  return new EigenvalueDecomposition(cm).realEigenvalues
+    .map((i) => 1 / i - 1)
+    .filter((i) => i >= 0);
 }
 
 /**
@@ -72,20 +80,20 @@ export function computeIrr (cashFlows: number[]): number[] {
  * @param rate - The discount rate.
  * @returns The NPV. NaN if no solution.
  */
-export function computeNpv (cashFlows: number[], rate: number): number {
+export function computeNpv(cashFlows: number[], rate: number): number {
   if (cashFlows.length === 0) {
-    return NaN
+    return NaN;
   }
 
   if (rate <= 0) {
-    return NaN
+    return NaN;
   }
 
-  let result = cashFlows[0]
-  let discount = 1
+  let result = cashFlows[0];
+  let discount = 1;
   for (const cashFlow of cashFlows.slice(1)) {
-    discount *= 1 + rate
-    result += cashFlow / discount
+    discount *= 1 + rate;
+    result += cashFlow / discount;
   }
-  return result
+  return result;
 }
