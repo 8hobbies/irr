@@ -51,8 +51,7 @@ export function computeIrr (cashFlows: number[]): number[] {
   cashFlows = cashFlows.slice(firstNonZero)
   // Now cashFlows must contain a non-zero element because the code above has already filtered out
   // the situation in which cashFlows does not contain non-zeros.
-  // eslint-disable-next-line  @typescript-eslint/no-non-null-assertion
-  cashFlows = cashFlows.slice(0, cashFlows.findLastIndex(notZero)! + 1)
+  cashFlows = cashFlows.slice(0, cashFlows.findLastIndex(notZero) + 1)
 
   // Not enough cashFlow entries, returns nothing.
   if (cashFlows.length <= 1) {
