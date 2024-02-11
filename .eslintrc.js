@@ -4,7 +4,10 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  extends: "standard-with-typescript",
+  extends: [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/strict-type-checked",
+  ],
   overrides: [
     {
       env: {
@@ -18,6 +21,7 @@ module.exports = {
   ],
   parserOptions: {
     sourceType: "module",
+    project: ["tsconfig.json"],
   },
   rules: {},
 };
