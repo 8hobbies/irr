@@ -35,15 +35,17 @@ describe("computeIrr function", () => {
     expect(computeIrr([-1, Infinity])).toStrictEqual([]);
   });
   test("three solvable inputs", () => {
-    expect(computeIrr([-1, 1, 2])).toStrictEqual([1, -2]);
+    expect(computeIrr([-1, 1, 2])).toStrictEqual([1]);
   });
   test("three unsolvable inputs", () => {
     expect(computeIrr([-1, -1, -2])).toStrictEqual([]);
   });
   test("large solvable inputs", () => {
-    expect(
-      computeIrr([-1000, Array<number>(30).fill(20), 1020].flat())[0],
-    ).toBeCloseTo(0.02);
+    computeIrr([-1000, Array<number>(30).fill(20), 1020].flat()).forEach(
+      (elem) => {
+        expect(elem).toBeCloseTo(0.02);
+      },
+    );
   });
   test("all zero inputs", () => {
     expect(computeIrr([0])).toStrictEqual([]);
@@ -67,6 +69,9 @@ describe("computeIrr function", () => {
   test("solvable with leading and trailing zero inputs", () => {
     expect(computeIrr([0, -1, 2, 0])).toStrictEqual([1]);
   });
+  test("solvable with solutions including numbers less than -100%", () => {
+    expect(computeIrr([1, 1])).toHaveLength(0);
+  })
 });
 
 describe("computeNpv function", () => {

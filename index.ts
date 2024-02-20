@@ -35,7 +35,10 @@ function computeCompanionMatrix(p: number[]): Matrix {
 
 /**
  * Computes the Internal Rate of Return (IRR) of the given cash flows. There may be multiple valid
- * IRR results. NaN and infinite results are filtered out.
+ * IRR results. NaN and infinite results are filtered out. Results less than -100% are also filtered
+ * out, since they are unreasonable as IRRs --- investment would turn negative in the next period
+ * after a period with a positive balance, and the negative balance would generate positive return
+ * in that period.
  *
  * @param cashFlows - The cash flow of each period.
  * @returns An array of IRRs.
@@ -72,7 +75,7 @@ export function computeIrr(cashFlows: number[]): number[] {
   return eigenvalues.realEigenvalues
     .filter((_, index) => eigenvalues.imaginaryEigenvalues[index] === 0) // no imaginary part
     .map((i) => 1 / i - 1)
-    .filter((i) => !isNaN(i) && isFinite(i));
+    .filter((i) => !isNaN(i) && isFinite(i) && i >= -1);
 }
 
 /**
