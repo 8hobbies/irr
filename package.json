@@ -1,6 +1,6 @@
 {
   "name": "@hong-xu/irr",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "A package for computing the internal rate of return and net present value.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -38,7 +38,7 @@
     "@babel/preset-env": "^7.23.9",
     "@babel/preset-typescript": "^7.23.3",
     "@jest/globals": "^29.7.0",
-    "@types/node": "^20.11.17",
+    "@types/node": "^20.11.19",
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "eslint": "^8.56.0",
     "eslint-plugin-import": "^2.29.1",
