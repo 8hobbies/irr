@@ -71,7 +71,7 @@ describe("computeIrr function", () => {
   });
   test("solvable with solutions including numbers less than -100%", () => {
     expect(computeIrr([1, 1])).toHaveLength(0);
-  })
+  });
 });
 
 describe("computeNpv function", () => {
