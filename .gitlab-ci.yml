@@ -55,6 +55,11 @@ runtime-18:
   extends: ".runtime"
   variables:
     NODE_VERSION: "18"
+  artifacts:
+    reports:
+      coverage_report:
+        coverage_format: cobertura
+        path: coverage/cobertura-coverage.xml
 
 runtime-20:
   extends: ".runtime"

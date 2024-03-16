@@ -14,11 +14,12 @@
   "scripts": {
     "clean": "tsc --build --clean",
     "compile": "tsc",
+    "coverage": "jest --coverage",
     "doc": "typedoc",
     "format": "eslint --fix --ext .ts . && prettier . --write",
     "lint": "eslint --ext .ts . && prettier . --check",
     "prepack": "npm run clean && npm run compile",
-    "test": "npm run compile && jest",
+    "test": "npm run compile && npm run coverage",
     "test-all": "npm run compile && npm run lint && npm run test && npm run doc"
   },
   "repository": {
