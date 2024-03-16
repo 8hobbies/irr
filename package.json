@@ -1,6 +1,6 @@
 {
   "name": "@8hobbies/irr",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Computing the internal rate of return and net present value of a series of cash flows.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -35,10 +35,10 @@
   },
   "homepage": "https://irr.8hobbies.com",
   "devDependencies": {
-    "@babel/preset-env": "^7.23.9",
+    "@babel/preset-env": "^7.24.0",
     "@babel/preset-typescript": "^7.23.3",
     "@jest/globals": "^29.7.0",
-    "@types/node": "^20.11.20",
+    "@types/node": "^20.11.28",
     "@typescript-eslint/eslint-plugin": "^6.21.0",
     "eslint": "^8.57.0",
     "eslint-plugin-import": "^2.29.1",
@@ -47,8 +47,8 @@
     "jest": "^29.7.0",
     "prettier": "^3.2.5",
     "ts-node": "^10.9.2",
-    "typedoc": "^0.25.8",
-    "typescript": "^5.3.3"
+    "typedoc": "^0.25.12",
+    "typescript": "^5.4.2"
   },
   "dependencies": {
     "ml-matrix": "^6.11.0"
