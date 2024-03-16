@@ -1,8 +1,22 @@
 # IRR
 
+[![npm version](https://badge.fury.io/js/@8hobbies%2Firr.svg)](https://badge.fury.io/js/@8hobbies%2Firr)
+[![pipeline status](https://gitlab.com/8hobbies/irr/badges/master/pipeline.svg)](https://gitlab.com/8hobbies/irr/-/commits/master)
+
 A library that computes Internal Rate of Return (IRR) and Net Present Value (NPV). The package
 provides two functions: `computeIrr` and `computeNpv`. Please refer to the [online documentation][]
 or code comment in index.ts for detail.
+
+## Contributing
+
+Source code is available on [GitLab][source code].
+
+To report a bug, visit the [issue tracker][].
+
+To run test, run `npm run test-all`. To build for production, run `npm pack`.
+To build the documentation, run `npm run doc`.
+
+To send your contribution, open a [merge request][].
 
 ## License
 
@@ -20,4 +34,7 @@ or code comment in index.ts for detail.
     See the License for the specific language governing permissions and
     limitations under the License.
 
+[issue tracker]: https://gitlab.com/8hobbies/irr/issues
+[merge request]: https://gitlab.com/8hobbies/irr/-/merge_requests
 [online documentation]: https://irr.8hobbies.com/modules.html
+[source code]: https://gitlab.com/8hobbies/irr
