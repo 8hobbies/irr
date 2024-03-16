@@ -50,6 +50,7 @@ pages:
     - npm install
     - npm test
   interruptible: true
+  coverage: '/All files[^|]*\|[^|]*\s+([\d\.]+)/'
 
 runtime-18:
   extends: ".runtime"
