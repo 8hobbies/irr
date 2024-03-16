@@ -1,7 +1,7 @@
 {
-  "name": "@hong-xu/irr",
+  "name": "@8hobbies/irr",
   "version": "3.0.1",
-  "description": "A package for computing the internal rate of return and net present value.",
+  "description": "Computing the internal rate of return and net present value of a series of cash flows.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -23,7 +23,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@gitlab.com/xuhdev/irr.git"
+    "url": "https://gitlab.com/8hobbies/irr.git"
   },
   "keywords": [
     "finance"
@@ -31,9 +31,9 @@
   "author": "Hong Xu",
   "license": " Apache-2.0",
   "bugs": {
-    "url": "https://gitlab.com/xuhdev/irr/issues"
+    "url": "https://gitlab.com/8hobbies/irr/issues"
   },
-  "homepage": "https://irr.topbug.net",
+  "homepage": "https://irr.8hobbies.com",
   "devDependencies": {
     "@babel/preset-env": "^7.23.9",
     "@babel/preset-typescript": "^7.23.3",

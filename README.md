@@ -20,4 +20,4 @@ or code comment in index.ts for detail.
     See the License for the specific language governing permissions and
     limitations under the License.
 
-[online documentation]: https://irr.topbug.net/modules.html
+[online documentation]: https://irr.8hobbies.com/modules.html
