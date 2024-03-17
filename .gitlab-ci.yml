@@ -51,11 +51,6 @@ pages:
     - npm test
   interruptible: true
   coverage: '/All files[^|]*\|[^|]*\s+([\d\.]+)/'
-  artifacts:
-    reports:
-      coverage_report:
-        coverage_format: cobertura
-        path: coverage/cobertura-coverage.xml
 
 runtime-18:
   extends: ".runtime"
