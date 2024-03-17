@@ -22,7 +22,7 @@ To send your contribution, open a [merge request][].
 
 ## License
 
-```
+```text
 Copyright 2023-2024 Hong Xu <hong@8hobbies.com>
 
 Licensed under the Apache License, Version 2.0(the "License");
