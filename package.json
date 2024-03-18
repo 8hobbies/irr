@@ -15,7 +15,7 @@
     "clean": "tsc --build --clean",
     "compile": "tsc",
     "coverage": "jest --coverage",
-    "doc": "typedoc",
+    "doc": "typedoc --plugin @8hobbies/typedoc-plugin-404",
     "format": "eslint --fix --ext .ts . && prettier . --write",
     "lint": "eslint --ext .ts . && prettier . --check",
     "prepack": "npm run clean && npm run compile",
@@ -36,6 +36,7 @@
   },
   "homepage": "https://irr.8hobbies.com",
   "devDependencies": {
+    "@8hobbies/typedoc-plugin-404": "^1.0.2",
     "@babel/preset-env": "^7.24.0",
     "@babel/preset-typescript": "^7.23.3",
     "@jest/globals": "^29.7.0",
