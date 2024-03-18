@@ -1,5 +1,6 @@
 {
   "$schema": "https://typedoc.org/schema.json",
   "entryPoints": ["./index.ts"],
-  "plugin": ["@8hobbies/typedoc-plugin-404"]
+  "plugin": ["@8hobbies/typedoc-plugin-404"],
+  "sitemapBaseUrl": "https://irr.8hobbies.com"
 }
