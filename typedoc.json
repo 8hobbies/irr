@@ -1,4 +1,5 @@
 {
   "$schema": "https://typedoc.org/schema.json",
-  "entryPoints": ["./index.ts"]
+  "entryPoints": ["./index.ts"],
+  "plugin": ["@8hobbies/typedoc-plugin-404"]
 }
