@@ -37,7 +37,7 @@
   },
   "homepage": "https://irr.8hobbies.com",
   "devDependencies": {
-    "@8hobbies/eslint-conf-baseline": "^1.0.1",
+    "@8hobbies/eslint-conf-baseline": "^2.0.0",
     "@8hobbies/typedoc-plugin-404": "^1.0.2",
     "@babel/preset-env": "^7.24.0",
     "@babel/preset-typescript": "^7.23.3",
