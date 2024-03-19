@@ -13,7 +13,7 @@
 // limitations under the License.
 
 import { describe, expect, test } from "@jest/globals";
-import { computeIrr, computeNpv } from "./index";
+import { computeIrr, computeNpv } from "./index.ts";
 
 describe("computeIrr function", () => {
   test("input containing NaN", () => {

@@ -3,6 +3,7 @@
   "version": "3.0.3",
   "description": "Computing the internal rate of return and net present value of a series of cash flows.",
   "main": "dist/index.js",
+  "type": "module",
   "types": "dist/index.d.ts",
   "files": [
     "/dist",
@@ -13,7 +14,7 @@
   ],
   "scripts": {
     "clean": "tsc --build --clean",
-    "compile": "tsc",
+    "compile": "tsc --project tsconfig.json && tsc --project tsconfig.test.json",
     "coverage": "jest --coverage",
     "doc": "typedoc",
     "format": "eslint --fix --ext .ts . && prettier . --write",
@@ -30,7 +31,7 @@
     "finance"
   ],
   "author": "Hong Xu",
-  "license": " Apache-2.0",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://gitlab.com/8hobbies/irr/issues"
   },
