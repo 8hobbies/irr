@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-import { Matrix, EigenvalueDecomposition } from "ml-matrix";
+import { EigenvalueDecomposition, Matrix } from "ml-matrix";
 
 /**
  * Generates the companion matrix from given coefficients.

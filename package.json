@@ -17,8 +17,8 @@
     "compile": "tsc --project tsconfig.json && tsc --project tsconfig.test.json",
     "coverage": "jest --coverage",
     "doc": "typedoc",
-    "format": "eslint --fix --ext .ts . && prettier . --write",
-    "lint": "eslint --ext .ts . && prettier . --check",
+    "format": "eslint --fix *.ts *.mjs *.cjs && prettier . --write",
+    "lint": "eslint *.ts *.mjs *.cjs . && prettier . --check",
     "prepack": "npm run clean && npm run compile",
     "test": "npm run compile && npm run coverage",
     "test-all": "npm run compile && npm run lint && npm run test && npm run doc"
@@ -37,6 +37,7 @@
   },
   "homepage": "https://irr.8hobbies.com",
   "devDependencies": {
+    "@8hobbies/eslint-conf-baseline": "^1.0.0",
     "@8hobbies/typedoc-plugin-404": "^1.0.2",
     "@babel/preset-env": "^7.24.0",
     "@babel/preset-typescript": "^7.23.3",

@@ -12,8 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import { describe, expect, test } from "@jest/globals";
 import { computeIrr, computeNpv } from "./index.ts";
+import { describe, expect, test } from "@jest/globals";
 
 describe("computeIrr function", () => {
   test("input containing NaN", () => {
