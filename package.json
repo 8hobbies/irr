@@ -37,9 +37,9 @@
   },
   "homepage": "https://irr.8hobbies.com",
   "devDependencies": {
-    "@8hobbies/eslint-conf-baseline": "^2.0.0",
-    "@8hobbies/typedoc-plugin-404": "^1.0.2",
-    "@babel/preset-env": "^7.24.1",
+    "@8hobbies/eslint-conf-baseline": "^2.1.0",
+    "@8hobbies/typedoc-plugin-404": "^2.0.0",
+    "@babel/preset-env": "^7.24.3",
     "@babel/preset-typescript": "^7.24.1",
     "@jest/globals": "^29.7.0",
     "@types/node": "^20.11.30",
@@ -53,7 +53,7 @@
     "prettier": "^3.2.5",
     "ts-node": "^10.9.2",
     "typedoc": "^0.25.12",
-    "typescript": "^5.4.2"
+    "typescript": "^5.4.3"
   },
   "dependencies": {
     "ml-matrix": "^6.11.0"
