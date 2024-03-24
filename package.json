@@ -28,7 +28,9 @@
     "url": "https://gitlab.com/8hobbies/irr.git"
   },
   "keywords": [
-    "finance"
+    "finance",
+    "irr",
+    "npv"
   ],
   "author": "Hong Xu",
   "license": "Apache-2.0",
