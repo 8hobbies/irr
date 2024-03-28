@@ -17,8 +17,8 @@
     "compile": "tsc --project tsconfig.json && tsc --project tsconfig.test.json",
     "coverage": "jest --coverage",
     "doc": "typedoc && replace-in-files --string '=\"assets/' --replacement '=\"/assets/' docs/404.html",
-    "format": "eslint --fix *.ts *.mjs *.cjs && prettier . --write",
-    "lint": "eslint *.ts *.mjs *.cjs . && prettier . --check",
+    "format": "eslint --fix *.ts *.mjs *.cjs && prettier . .gitlab-ci.yml --write",
+    "lint": "eslint *.ts *.mjs *.cjs . && prettier . .gitlab-ci.yml --check",
     "prepack": "npm run clean && npm run compile",
     "test": "npm run compile && npm run coverage",
     "test-all": "npm run compile && npm run lint && npm run test && npm run doc"
@@ -32,7 +32,7 @@
     "irr",
     "npv"
   ],
-  "author": "Hong Xu",
+  "author": "8 Hobbies, LLC",
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://gitlab.com/8hobbies/irr/issues"
