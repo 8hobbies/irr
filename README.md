@@ -1,4 +1,4 @@
-# IRR
+# IRR -- A JS Library that Computes IRR and NPV
 
 [![npm version](https://badge.fury.io/js/@8hobbies%2Firr.svg)](https://badge.fury.io/js/@8hobbies%2Firr)
 [![pipeline status](https://gitlab.com/8hobbies/irr/badges/master/pipeline.svg)](https://gitlab.com/8hobbies/irr/-/commits/master)
