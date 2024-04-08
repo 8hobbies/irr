@@ -4,6 +4,8 @@
 [![pipeline status](https://gitlab.com/8hobbies/irr/badges/master/pipeline.svg)](https://gitlab.com/8hobbies/irr/-/commits/master)
 [![coverage report](https://gitlab.com/8hobbies/irr/badges/master/coverage.svg)](https://gitlab.com/8hobbies/irr/-/commits/master)
 
+[GitLab](https://gitlab.com/8hobbies/irr) | [GitHub](https://github.com/8hobbies/irr)
+
 A JavaScript/TypeScript library that computes [Internal Rate of Return (IRR)][] and [Net Present
 Value (NPV)][]. The package provides two functions: `computeIrr` and `computeNpv`. Please refer to
 the [online documentation][] or code comment in index.ts for detail.
