@@ -40,8 +40,8 @@
   "homepage": "https://irr.8hobbies.com",
   "devDependencies": {
     "@8hobbies/eslint-conf-baseline": "^2.1.0",
-    "@8hobbies/typedoc-plugin-404": "^2.0.1",
-    "@8hobbies/typedoc-plugin-plausible": "^1.0.1",
+    "@8hobbies/typedoc-plugin-404": "^2.0.2",
+    "@8hobbies/typedoc-plugin-plausible": "^1.0.2",
     "@babel/preset-env": "^7.24.4",
     "@babel/preset-typescript": "^7.24.1",
     "@jest/globals": "^29.7.0",
