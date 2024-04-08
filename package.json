@@ -40,20 +40,20 @@
   "homepage": "https://irr.8hobbies.com",
   "devDependencies": {
     "@8hobbies/eslint-conf-baseline": "^2.1.0",
-    "@8hobbies/typedoc-plugin-404": "^2.0.0",
-    "@8hobbies/typedoc-plugin-plausible": "^1.0.0",
-    "@babel/preset-env": "^7.24.3",
+    "@8hobbies/typedoc-plugin-404": "^2.0.1",
+    "@8hobbies/typedoc-plugin-plausible": "^1.0.1",
+    "@babel/preset-env": "^7.24.4",
     "@babel/preset-typescript": "^7.24.1",
     "@jest/globals": "^29.7.0",
-    "@types/node": "^20.11.30",
+    "@types/node": "^20.12.5",
     "globals": "^15.0.0",
     "jest": "^29.7.0",
     "prettier": "^3.2.5",
     "replace-in-files-cli": "^2.2.0",
     "rimraf": "^5.0.5",
     "ts-node": "^10.9.2",
-    "typedoc": "^0.25.12",
-    "typescript": "^5.4.3"
+    "typedoc": "^0.25.13",
+    "typescript": "^5.4.4"
   },
   "dependencies": {
     "ml-matrix": "^6.11.0"
