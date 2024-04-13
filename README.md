@@ -43,5 +43,5 @@ limitations under the License.
 [Net Present Value (NPV)]: https://en.wikipedia.org/wiki/Net_present_value
 [issue tracker]: https://gitlab.com/8hobbies/irr/issues
 [merge request]: https://gitlab.com/8hobbies/irr/-/merge_requests
-[online documentation]: https://irr.8hobbies.com/modules.html
+[online documentation]: https://irr.8hob.io/modules.html
 [source code]: https://gitlab.com/8hobbies/irr
