@@ -6,5 +6,5 @@
     "@8hobbies/typedoc-plugin-404",
     "@8hobbies/typedoc-plugin-plausible"
   ],
-  "plausibleSiteDomain": "oss.8hobbies.com"
+  "plausibleSiteDomain": "oss.8hob.io"
 }
