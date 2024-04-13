@@ -1,6 +1,6 @@
 {
   "name": "@8hobbies/irr",
-  "version": "3.0.4",
+  "version": "3.0.5",
   "description": "Computing the internal rate of return and net present value of a series of cash flows.",
   "main": "dist/index.js",
   "type": "module",
