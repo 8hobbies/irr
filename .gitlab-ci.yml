@@ -18,14 +18,14 @@ include:
     file: "/templates/renovate-config-validator.gitlab-ci.yml"
 
 lint:
-  image: "node:22.7.0"
+  image: "node:22.8.0"
   script:
     - npm install
     - npm run lint
   interruptible: true
 
 .docs:
-  image: "node:22.7.0"
+  image: "node:22.8.0"
   script:
     - npm install
     - npm run doc
