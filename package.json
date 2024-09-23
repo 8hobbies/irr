@@ -9,16 +9,16 @@
     "/dist",
     "!/dist/**.test.d.ts",
     "!/dist/**.test.js",
-    "!/dist/jest.config.d.ts",
-    "!/dist/jest.config.js"
+    "!/dist/vitest.config.d.ts",
+    "!/dist/vitest.config.js"
   ],
   "scripts": {
     "clean": "rimraf dist/",
     "compile": "tsc --project tsconfig.json && tsc --project tsconfig.test.json",
-    "coverage": "jest --coverage",
+    "coverage": "vitest --run --coverage",
     "doc": "typedoc",
-    "format": "eslint --fix *.ts *.mjs *.cjs && prettier . .gitlab-ci.yml --write",
-    "lint": "eslint *.ts *.mjs *.cjs && prettier . .gitlab-ci.yml --check",
+    "format": "eslint --fix *.ts *.mjs && prettier . .gitlab-ci.yml --write",
+    "lint": "eslint *.ts *.mjs && prettier . .gitlab-ci.yml --check",
     "prepack": "npm run clean && npm run compile",
     "test": "npm run compile && npm run coverage",
     "test-all": "npm run compile && npm run lint && npm run test && npm run doc"
@@ -44,15 +44,16 @@
     "@8hobbies/typedoc-plugin-plausible": "^2.0.0",
     "@babel/preset-env": "^7.25.4",
     "@babel/preset-typescript": "^7.24.7",
-    "@jest/globals": "^29.7.0",
+    "@types/jest": "^29.5.13",
     "@types/node": "^22.5.5",
+    "@vitest/coverage-v8": "^2.1.1",
     "globals": "^15.9.0",
-    "jest": "^29.7.0",
     "prettier": "^3.3.3",
     "rimraf": "^6.0.1",
     "ts-node": "^10.9.2",
     "typedoc": "^0.26.7",
-    "typescript": "^5.5.4"
+    "typescript": "~5.5.4",
+    "vitest": "^2.1.1"
   },
   "dependencies": {
     "ml-matrix": "^6.11.1"
