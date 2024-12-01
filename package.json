@@ -40,8 +40,8 @@
   "homepage": "https://irr.8hob.io",
   "devDependencies": {
     "@8hobbies/eslint-conf-baseline": "^6.0.0",
-    "@8hobbies/typedoc-plugin-404": "^3.0.0",
-    "@8hobbies/typedoc-plugin-plausible": "^2.0.0",
+    "@8hobbies/typedoc-plugin-404": "^3.1.0",
+    "@8hobbies/typedoc-plugin-plausible": "^2.1.0",
     "@babel/preset-env": "^7.26.0",
     "@babel/preset-typescript": "^7.26.0",
     "@types/jest": "^29.5.14",
@@ -51,7 +51,7 @@
     "prettier": "^3.3.3",
     "rimraf": "^6.0.1",
     "ts-node": "^10.9.2",
-    "typedoc": "^0.26.11",
+    "typedoc": "^0.27.2",
     "typescript": "~5.7.2",
     "vitest": "^2.1.5"
   },
