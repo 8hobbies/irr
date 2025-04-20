@@ -45,7 +45,7 @@
     "@babel/preset-env": "7.26.9",
     "@babel/preset-typescript": "7.27.0",
     "@types/jest": "29.5.14",
-    "@types/node": "22.14.0",
+    "@types/node": "22.14.1",
     "@vitest/coverage-v8": "3.1.1",
     "globals": "16.0.0",
     "prettier": "3.5.3",
