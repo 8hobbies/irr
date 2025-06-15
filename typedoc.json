@@ -3,10 +3,7 @@
   "entryPoints": ["./index.ts"],
   "hostedBaseUrl": "https://irr.8hob.io",
   "useHostedBaseUrlForAbsoluteLinks": true,
-  "plugin": [
-    "@8hobbies/typedoc-plugin-404",
-    "@8hobbies/typedoc-plugin-plausible"
-  ],
-  "customFooterHtml": "&copy; 2024 <a href=\"https://8hob.io\">8 Hobbies, LLC</a>",
+  "plugin": ["@8hobbies/typedoc-plugin-plausible"],
+  "customFooterHtml": "&copy; 2024-2025 <a href=\"https://8hob.io\">8 Hobbies, LLC</a>",
   "plausibleSiteDomain": "oss.8hob.io"
 }
