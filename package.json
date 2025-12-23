@@ -44,15 +44,15 @@
     "@babel/preset-env": "7.28.5",
     "@babel/preset-typescript": "7.28.5",
     "@types/jest": "30.0.0",
-    "@types/node": "22.19.1",
-    "@vitest/coverage-v8": "4.0.15",
+    "@types/node": "22.19.3",
+    "@vitest/coverage-v8": "4.0.16",
     "globals": "16.5.0",
     "prettier": "3.7.4",
     "rimraf": "6.1.2",
     "ts-node": "10.9.2",
     "typedoc": "0.28.15",
     "typescript": "5.9.3",
-    "vitest": "4.0.15"
+    "vitest": "4.0.16"
   },
   "dependencies": {
     "ml-matrix": "^6.12.1"
