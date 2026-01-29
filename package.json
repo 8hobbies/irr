@@ -41,18 +41,18 @@
   "devDependencies": {
     "@8hobbies/eslint-conf-baseline": "7.0.0",
     "@8hobbies/typedoc-plugin-plausible": "2.2.0",
-    "@babel/preset-env": "7.28.5",
+    "@babel/preset-env": "7.28.6",
     "@babel/preset-typescript": "7.28.5",
     "@types/jest": "30.0.0",
-    "@types/node": "24.10.4",
-    "@vitest/coverage-v8": "4.0.16",
+    "@types/node": "24.10.9",
+    "@vitest/coverage-v8": "4.0.18",
     "globals": "16.5.0",
-    "prettier": "3.7.4",
+    "prettier": "3.8.1",
     "rimraf": "6.1.2",
     "ts-node": "10.9.2",
-    "typedoc": "0.28.15",
+    "typedoc": "0.28.16",
     "typescript": "5.9.3",
-    "vitest": "4.0.16"
+    "vitest": "4.0.18"
   },
   "dependencies": {
     "ml-matrix": "^6.12.1"
